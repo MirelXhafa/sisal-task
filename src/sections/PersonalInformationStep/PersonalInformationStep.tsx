@@ -57,7 +57,6 @@ const PersonalInformationStep: FC<PersonalInformationStepProps> = ({setFormData,
     })
 
     const onSubmit: SubmitHandler<TPersonalInformation> = (data: TPersonalInformation) => {
-        console.log('data: ', data)
         handleNext()
         setFormData({
             personalInformation: data

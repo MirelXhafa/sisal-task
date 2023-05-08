@@ -24,8 +24,6 @@ const SummarySection: FC<SummarySectionProps> = ({handleNext, handleBack, steps,
 
     const handleRegister = async () => {
 
-        console.log('data: ', data)
-
         const save = await SaveUser({
             firstname: data.personalInformation.first_name,
             lastname: data.personalInformation.last_name,
@@ -78,12 +76,6 @@ const SummarySection: FC<SummarySectionProps> = ({handleNext, handleBack, steps,
                 </div>
 
                 <div className={"flex flex-row gap-4 mt-4"}>
-                    {/*{*/}
-                    {/*    steps.selectedIndex > 0 ? (*/}
-                    {/*        <Button variant={"outlined"} color={"secondary"}*/}
-                    {/*                onClick={handleBack}>Back</Button>) : null*/}
-                    {/*}*/}
-
                     <Button variant={"outlined"} color={'primary'}
                             disabled={steps.selectedIndex === steps.numberOfSteps}
                             type={'submit'} onClick={handleRegister}>Registrati</Button>

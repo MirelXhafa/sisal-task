@@ -21,7 +21,6 @@ const formDefaultValues: TAccountInformation =
 const checkIfStorageHasValues = () => {
     if (typeof window !== 'undefined') {
         const storage = localStorage;
-        console.log("storage: ", storage.getItem('formData'))
         if (storage.getItem('formData') !== null) {
 
             const accountInformation = JSON.parse(storage.getItem('formData')!).accountInformation
